@@ -62,10 +62,10 @@
 
                             <div class="form-group">
                                 <label class="font-weight-bold">Photo</label>
-                                <input type="file" class="form-control @error('image') is-invalid @enderror" name="image">
+                                <input type="file" class="form-control @error('photo') is-invalid @enderror" name="photo">
                             
                                 <!-- error message untuk title -->
-                                @error('image')
+                                @error('photo')
                                     <div class="alert alert-danger mt-2">
                                         {{ $message }}
                                     </div>

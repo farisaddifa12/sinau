@@ -48,15 +48,15 @@ class PostController extends Controller
         ]);
 
         //upload image
-        $image = $request->file('photo');
-        $image->storeAs('public/posts', $image->hashName());
+        $photo = $request->file('photo');
+        $photo->storeAs('public/posts', $photo->hashName());
 
         //create post
         Post::create([
             'name'       => $request->name,
             'email'      => $request->email,
             'phone'      => $request->phone,
-            'photo'      => $image->hashName()
+            'photo'      => $photo->hashName()
         ]);
 
         //redirect to index
