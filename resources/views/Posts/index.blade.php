@@ -22,6 +22,7 @@
                         <table class="table table-bordered">
                             <thead>
                               <tr>
+                                <th scope="col">id</th>
                                 <th scope="col">Nama</th>
                                 <th scope="col">Email</th>
                                 <th scope="col">Nomor Hp</th>
@@ -32,6 +33,7 @@
                             <tbody>
                               @forelse ($posts as $post)
                                 <tr>
+                                    <td>{{ $post->id }}</td>
                                     <td>{{ $post->name }}</td>
                                     <td>{!! $post->email !!}</td>
                                     <td>{{ $post->phone }}</td>
